@@ -1,0 +1,87 @@
+Script started on Sun 26 Aug 2018 06:13:32 PM CDT
+[?1034hbash-4.2$ man cd
+[?1049h[?1h=BASH_BUILTINS(1)            General Commands Manual           BASH_BUILTINS(1)[m
+[m
+[1mNAME[0m[m
+       bash,  :,  .,  [, alias, bg, bind, break, builtin, caller, cd, command,[m
+       compgen, complete, compopt,  continue,  declare,  dirs,  disown,  echo,[m
+       enable,  eval,  exec, exit, export, false, fc, fg, getopts, hash, help,[m
+       history, jobs, kill, let, local, logout, mapfile, popd, printf,  pushd,[m
+       pwd,  read, readonly, return, set, shift, shopt, source, suspend, test,[m
+       times, trap, true, type, typeset, ulimit, umask, unalias, unset, wait -[m
+       bash built-in commands, see [1mbash[0m(1)[m
+[m
+[1mBASH[0m [1mBUILTIN[0m [1mCOMMANDS[0m[m
+       Unless otherwise noted, each builtin command documented in this section[m
+       as accepting options preceded by [1m-[0m accepts [1m--[0m to signify the end of the[m
+       options.   The  [1m:[0m, [1mtrue[0m, [1mfalse[0m, and [1mtest[0m builtins do not accept options[m
+       and do not treat [1m--[0m specially.  The [1mexit[0m, [1mlogout[0m, [1mbreak[0m, [1mcontinue[0m, [1mlet[0m,[m
+       and  [1mshift[0m builtins accept and process arguments beginning with [1m-[0m with‐[m
+       out requiring [1m--[0m.  Other builtins that accept  arguments  but  are  not[m
+       specified  as accepting options interpret arguments beginning with [1m-[0m as[m
+       invalid options and require [1m--[0m to prevent this interpretation.[m
+       [1m:[0m [[4marguments[24m][m
+              No effect; the command does nothing beyond  expanding  [4marguments[24m[m
+              and  performing any specified redirections.  A zero exit code is[m
+[7m Manual page cd(1) line 1 (press h for help or q to quit)[27m[K[K              returned.[m
+[7m Manual page cd(1) line 2 (press h for help or q to quit)[27m[K[K[m
+[7m Manual page cd(1) line 5 (press h for help or q to quit)[27m[K[K        [1m.[0m  [4mfilename[24m [[4marguments[24m][m
+[7m Manual page cd(1) line 6 (press h for help or q to quit)[27m[K[K       [1msource[0m [4mfilename[24m [[4marguments[24m][m
+[7m Manual page cd(1) line 7 (press h for help or q to quit)[27m[K[K[?1l>[?1049lbash-4.2$ pwd
+/home/u3/rri0003/comp3500
+bash-4.2$ /home/u3/rri0003
+bash: /home/u3/rri0003: Is a directory
+bash-4.2$ cd comp[K[K[K[K[K[K[Kpwd
+/home/u3/rri0003/comp3500
+bash-4.2$ cd /home/us[K3/rri0003
+bash-4.2$ pwd
+/home/u3/rri0003
+bash-4.2$ cd[K[Kls
+comp3500
+bash-4.2$ mkdir test
+bash-4.2$ ls
+comp3500  test
+bash-4.2$ rm [K[K[Krmdire[K rt[K[Ktest
+bash-4.2$ ls
+comp3500
+bash-4.2$ chmod +[K[K[K[K[K[K[Kcd comp356[K00
+bash-4.2$ ls
+commands.script  interrupts.txt  meminfo.txt  testing
+cpuinfo.txt	 lspci.txt	 test	      test.txt
+bash-4.2$ chmod +x commands.script
+bash-4.2$ cleart[K
+[3;J[H[2Jbash-4.2$ top
+[?1h=[?25l[H[2J(B[mtop - 18:15:38 up 3 days,  9:29,  3 users,  load average: 0.01, 0.03, 0.44(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 378 (B[m[39;49mtotal,(B[m[39;49m[1m   1 (B[m[39;49mrunning,(B[m[39;49m[1m 377 (B[m[39;49msleeping,(B[m[39;49m[1m   0 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  0.6 (B[m[39;49mus,(B[m[39;49m[1m  1.7 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 97.7 (B[m[39;49mid,(B[m[39;49m[1m  0.0 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m[39;49m[K
+KiB Mem :(B[m[39;49m[1m 24510024 (B[m[39;49mtotal,(B[m[39;49m[1m 17575336 (B[m[39;49mfree,(B[m[39;49m[1m  2729712 (B[m[39;49mused,(B[m[39;49m[1m  4204976 (B[m[39;49mbuff/cache(B[m[39;49m(B[m[39;49m[K
+KiB Swap:(B[m[39;49m[1m 12386300 (B[m[39;49mtotal,(B[m[39;49m[1m 12386300 (B[m[39;49mfree,(B[m[39;49m[1m        0 (B[m[39;49mused.(B[m[39;49m[1m 21183404 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+[7m  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND     (B[m[39;49m[K
+(B[m[1m 2948 rri0003   20   0  168580   2532   1632 R  10.0  0.0   0:00.05 top         (B[m[39;49m[K
+(B[m    1 root      20   0  194812   7912   4168 S   0.0  0.0   1:30.33 systemd     (B[m[39;49m[K
+(B[m    2 root      20   0       0      0      0 S   0.0  0.0   0:00.19 kthreadd    (B[m[39;49m[K
+(B[m    3 root      20   0       0      0      0 S   0.0  0.0   0:00.09 ksoftirqd/0 (B[m[39;49m[K
+(B[m    5 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kworker/0:+ (B[m[39;49m[K
+(B[m    8 root      rt   0       0      0      0 S   0.0  0.0   0:00.20 migration/0 (B[m[39;49m[K
+(B[m    9 root      20   0       0      0      0 S   0.0  0.0   0:00.00 rcu_bh      (B[m[39;49m[K
+(B[m   10 root      20   0       0      0      0 S   0.0  0.0   0:27.22 rcu_sched   (B[m[39;49m[K
+(B[m   11 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 lru-add-dr+ (B[m[39;49m[K
+(B[m   12 root      rt   0       0      0      0 S   0.0  0.0   0:02.43 watchdog/0  (B[m[39;49m[K
+(B[m   13 root      rt   0       0      0      0 S   0.0  0.0   0:00.73 watchdog/1  (B[m[39;49m[K
+(B[m   14 root      rt   0       0      0      0 S   0.0  0.0   0:00.12 migration/1 (B[m[39;49m[K
+(B[m   15 root      20   0       0      0      0 S   0.0  0.0   0:00.10 ksoftirqd/1 (B[m[39;49m[K
+(B[m   17 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kworker/1:+ (B[m[39;49m[K
+(B[m   19 root      rt   0       0      0      0 S   0.0  0.0   0:00.66 watchdog/2  (B[m[39;49m[K
+(B[m   20 root      rt   0       0      0      0 S   0.0  0.0   0:00.12 migration/2 (B[m[39;49m[K
+(B[m   21 root      20   0       0      0      0 S   0.0  0.0   0:00.07 ksoftirqd/2 (B[m[39;49m[K[?1l>[25;1H
+[?12l[?25h[Kbash-4.2$ whio[K[Ko
+rri0003  pts/0        2018-08-26 18:12 (ettin.eng.auburn.edu)
+dzl0021  pts/1        2018-08-24 22:46 (:1)
+rri0003  pts/2        2018-08-26 18:13
+bash-4.2$ nproc
+16
+bash-4.2$ exit
+exit
+
+Script done on Sun 26 Aug 2018 06:15:52 PM CDT
